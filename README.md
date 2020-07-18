@@ -18,7 +18,7 @@ Look at the schema at `db/schema.rb`
     ```
     SELECT date_trunc('day', issue_date) "day", sum(amount) "sum_per_day"
    from payments
-   where extract(year from issue_date) = 2020
+   where extract(year from issue_date) = 2016
    group by day
    ORDER BY sum_per_day desc limit 1;
    ```
